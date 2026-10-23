@@ -1,4 +1,4 @@
-const CACHE = 'carnet-ec87e42f1443';
+const CACHE = 'carnet-fe275ec2288e';
 const FICHIERS = ['./', './index.html', './manifest.webmanifest', './icone-853797fd-180.png', './icone-853797fd-192.png', './icone-853797fd-512.png'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(FICHIERS.map(f => new Request(f, { cache: 'reload' })))).then(() => self.skipWaiting()));
